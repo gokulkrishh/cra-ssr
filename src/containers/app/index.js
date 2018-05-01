@@ -1,47 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { Link } from 'react-router-dom';
-
-// Action Creators
-import { removeNotification } from '../../modules/notification';
-
-// UI Components
-import Notifications from './components/notifications';
+import React, { Component } from "react";
 
 // Routes
-import Routes from './routes';
+import Routes from "./routes";
 
 class App extends Component {
-  render() {
-    return (
-      <div id="app">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/something">A broken page link</Link>
-          </li>
-        </ul>
-        <Notifications
-          notifications={this.props.notifications}
-          removeFunc={this.props.removeNotification}
-        />
-        <Routes />
-      </div>
-    );
-  }
+	render() {
+		return <Routes />;
+	}
 }
 
-const mapStateToProps = state => ({
-  notifications: state.notification.notifications
-});
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ removeNotification }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

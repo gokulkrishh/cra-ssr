@@ -1,25 +1,24 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import Page from '../../components/page';
-import { addNotification } from '../../../../modules/notification';
+import React, { Component } from "react";
 
 class Homepage extends Component {
-  render() {
-    return (
-      <Page title="Homepage" id="homepage">
-        <h1>Welcome to our beautiful homepage</h1>
-        <button
-          onClick={() => this.props.addNotification({ text: 'this is great' })}
-        >
-          Add notification
-        </button>
-      </Page>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/about">About</a>
+					</li>
+					<li>
+						<a href="/something">A broken page</a>
+					</li>
+				</ul>
+				<h1>Welcome to our beautiful homepage</h1>
+			</div>
+		);
+	}
 }
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ addNotification }, dispatch);
-
-export default connect(null, mapDispatchToProps)(Homepage);
+export default Homepage;
