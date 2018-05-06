@@ -3,7 +3,6 @@ import compression from "compression";
 import express from "express";
 import morgan from "morgan";
 import path from "path";
-
 import universalLoader from "./universal";
 
 // Create our express app (using the port optionally specified)
