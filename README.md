@@ -1,6 +1,6 @@
 # Server-side rendering in `create-react-app`
 
-* [Deployed application](https://cra-ssr.surge.sh)
+* [Deployed application](https://discreet-blade.glitch.me/)
 
 ## Tools used
 
